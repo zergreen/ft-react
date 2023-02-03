@@ -1,10 +1,10 @@
 <?php
 $username = $_POST['username'];
-$password = $_POST['password'];
+$pwd = $_POST['pwd'];
 
-echo "|username: $username <br> |password: $password <br>";
+echo "|username: $username <br> |password: $pwd <br>";
 
-if($username == "c001" && $password == "admin1234"){
+if($username == "admin" && $pwd == "123456"){
     header("Location: home.php");
 } else {
     header("Location: error-authen.php");
