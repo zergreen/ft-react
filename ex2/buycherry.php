@@ -6,14 +6,11 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-
-<hr>
-
 <script>
     function calc(a,b,c) {
         return {
             T_PGood: 0,
-            T_PBuy: 0,
+            T_PBuy: '',
             T_PWeight: '',
             T_PoorMoney: '',
             T_CommonFee: 0,
@@ -97,7 +94,7 @@
                         นน.เชอรี่ที่รับซื้อ
                     </td>
                     <td>
-                        <input type="text" name="weight_buy" size="5" x-model=T_PBuy placeholder="xxx" @input="update_total" > กิโลกรัม
+                        <input type="text" name="weight_buy" size="5" x-model=T_PBuy placeholder="xxx" @input="update_total" required> กิโลกรัม
                     </td>
                 </tr>
                 <tr>
@@ -119,9 +116,9 @@
                         นน.เชอรี่คุณภาพ
                     </td>
                     <td>
-                        <input type="text"  @input="update_total" size="5" x-model="T_PBuy" placeholder="120" disabled> -
-                        <input type="text" @input="update_total" x-model="T_PWeight" placeholder='xxx' size=5 value="4"> =
-                        <input type="text" name=weight_total x-model=T_PGood size=5 disabled> กิโลกรัม
+                        <input type="text"  @input="update_total" size="5" x-model="T_PBuy" placeholder="120" readonly> -
+                        <input type="text" name=cherry_flow @input="update_total" x-model="T_PWeight" placeholder='xxx' size=5 value="4" required> =
+                        <input type="text" name=weight_total x-model=T_PGood size=5 readonly> กิโลกรัม
                     </td>
                 </tr>
 
@@ -134,11 +131,11 @@
             <table>
                 <tr>
                     <td>เงินเชอรี่คุณภาพ
-                    <td><input type="text" name="type_goodmoney" x-model="T_GoodMoney" size="5" disabled> บาท
+                    <td><input type="text" name="type_goodmoney" x-model="T_GoodMoney" size="5" readonly> บาท
                 </tr>
                 <tr>
                     <td>เงินเชอรี่ลอย
-                    <td><input type="text" name="poor_money" x-model="T_PoorMoney" size="5" disabled> บาท
+                    <td><input type="text" name="poor_money" x-model="T_PoorMoney" size="5" readonly> บาท
                 </tr>
             </table>
         </div>
@@ -146,15 +143,15 @@
             <table>
                 <tr>
                     <td>หักค่าบริหารกองกลาง
-                    <td><input type="text" size="5" name="common_fee" x-model="T_CommonFee" disabled> บาท
+                    <td><input type="text" size="5" name="common_fee" x-model="T_CommonFee" readonly> บาท
                 </tr>
                 <tr>
                     <td>หักเงินออมสมาชิก
-                    <td><input type="text" size="5" name="member_saving" x-model="T_MemberSaving" disabled> บาท
+                    <td><input type="text" size="5" name="member_saving" x-model="T_MemberSaving" readonly> บาท
                 </tr>
                 <tr>
                     <td>รายรับสุทธิ
-                    <td><input type="text" size="5" name="total_net" x-model="T_Net" disabled> บาท
+                    <td><input type="text" size="5" name="total_net" x-model="T_Net" readonly> บาท
                 </tr>
             </table>
         </div>
