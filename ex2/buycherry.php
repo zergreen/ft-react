@@ -21,6 +21,8 @@
             grade: 'A',
             grade_value : 80,
 
+            d_grade_value: 10,
+
 
             update_total() {
                 this.T_PGood = (this.T_PBuy - this.T_PWeight);
@@ -36,13 +38,13 @@
             },
 
             update_poormoney() {
-                this.T_PoorMoney = (this.T_PWeight * this.grade_value)
+                this.T_PoorMoney = (this.T_PWeight * this.d_grade_value)
             },
 
             update_ComFeeAndMemSav() {
                 this.T_CommonFee = (this.T_PBuy * 1.0)
                 this.T_MemberSaving = (this.T_PBuy * 0.5)
-                this.T_Net = (this.T_GoodMoney) - (this.T_CommonFee + this.T_MemberSaving)
+                this.T_Net = (this.T_GoodMoney + this.T_PoorMoney) - (this.T_CommonFee + this.T_MemberSaving)
             },
 
             set_grade() {

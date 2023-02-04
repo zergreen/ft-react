@@ -1,4 +1,4 @@
-
+<!-- 
 <center>
 <h1>LOGIN</h1>
 <form action="authen.php" method="post">
@@ -7,4 +7,10 @@
     <br>
     <input type="submit" value="login"> 
 </form>
-</center>
+</center> -->
+
+<?php 
+$url="session.php";
+
+header("Location: $url");
+?>
