@@ -34,7 +34,8 @@
 
         <center>
             <input type="submit" value="บันทึก"> <span></span>
-            <input type="reset" value="ยกเลิก">
+            <input type="button" value="ยกเลิก" onclick="history.back()"> 
+            <!-- <input type="reset" value="ล้าง">  -->
         </center>
         </form>
     </div>

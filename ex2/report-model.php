@@ -30,7 +30,7 @@
             <td>120</td>
             <td>A</td>
             <td>116</td>
-            <td>A</td>
+            <td>4</td>
             <td>9,300</td>
         </tbody>
     </table>
