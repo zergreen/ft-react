@@ -29,6 +29,8 @@
                 this.update_goodmoney();
                 this.update_poormoney();
                 this.update_ComFeeAndMemSav();
+
+                // this.set_grade();
             },
 
             update_goodmoney() {
@@ -104,12 +106,13 @@
                         เกรดเชอรี่
                     </td>
                     <td>
-                        <!-- <select name="cherry_grade" id="grade" x-model=grade x-on="set_grade">
+                        <select name="cherry_grade" x-model=grade x-on:change=set_grade>
+                        <!-- <select name="cherry_grade" x-model=grade x-on:change="alert('TEST!!!')"> -->
                             <option value="A">A</option>
                             <option value="B">B</option>
                             <option value="C">C</option>
-                        </select> -->
-                        <input type="text" name="cherry_grade" x-model=grade @input="set_grade" size="1">
+                        </select>
+                        <!-- <input type="text" name="cherry_grade" x-model=grade @input="set_grade" size="1"> -->
 
                     </td>
                 </tr>
@@ -127,6 +130,7 @@
             </table>
         </div>
         <br>
+        GRADE: <span x-text="grade"></span>
 
         <span></span>การเงิน
         <div>
