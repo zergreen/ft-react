@@ -61,12 +61,12 @@ CREATE TABLE T_Buy(
 
 -- set first entity for each table
 -- 66010000001 is stand by [66->year] , [01->department] , [0000001->number]
-INSERT INTO M_Employee VALUES (66010001, 'u1', 'p1', 'John', 'Doe', 'M', '2000-01-01', 'Add1', '123456', 'j@email.com', '2022-01-01');
-INSERT INTO M_Admin VALUES (66020001, 'Alex', 'Johnson', 'adm1', 'p1');
-INSERT INTO M_Member VALUES (66030001, 'Emily', 'Johnson', '123 Main St', '1234567890');
-INSERT INTO M_Grade VALUES (66040001, 'Gold', 99.99, '2022-01-01');
+INSERT INTO M_Employee VALUES (1, 'u1', 'p1', 'John', 'Doe', 'M', '2000-01-01', 'Add1', '123456', 'j@email.com', '2022-01-01');
+INSERT INTO M_Admin VALUES (1, 'Alex', 'Johnson', 'adm1', 'p1');
+INSERT INTO M_Member VALUES (1, 'Emily', 'Johnson', '123 Main St', '1234567890');
+INSERT INTO M_Grade VALUES (1, 'Gold', 99.99, '2022-01-01');
 INSERT INTO T_Buy (T_ID, M_EmpID, Member_ID, T_Class, T_Weight, T_Grade, T_GWeight, T_PWeight, T_GoodMoney, T_PoorMoney, T_CommonFee, T_MemberSaving, T_Net, Grade_Price) 
-VALUES (66050001, 66010001, 66030001, 'Class A', 100.0, 'Grade 1', 90.0, 10.0, 1000.0, 100.0, 50.0, 200.0, 800.0, 100.0);
+VALUES (1, 1, 1, 'Class A', 100.0, 'Grade 1', 90.0, 10.0, 1000.0, 100.0, 50.0, 200.0, 800.0, 100.0);
 
 
 INSERT INTO M_Employee(M_EmpUser, M_EmpPwd, M_EmpName, M_EmpSurname, M_EmpSex, M_EmpBod, M_EmpAddress, M_EmpTel, M_EmpEmail, M_EmpUpdate)
@@ -120,16 +120,12 @@ VALUES
 
 INSERT INTO T_Buy (M_EmpID, Member_ID, T_Class, T_Weight, T_Grade, T_GWeight, T_PWeight, T_GoodMoney, T_PoorMoney, T_CommonFee, T_MemberSaving, T_Net, Grade_Price) 
 VALUES 
-( 66010002, 66030002, 'Class B', 200.0, 'Grade 2', 180.0, 20.0, 2000.0, 200.0, 100.0, 400.0, 1600.0, 200.0),
-( 66010003, 66030003, 'Class C', 300.0, 'Grade 3', 270.0, 30.0, 3000.0, 300.0, 150.0, 600.0, 2400.0, 300.0),
-( 66010004, 66030004, 'Class D', 400.0, 'Grade 4', 360.0, 40.0, 4000.0, 400.0, 200.0, 800.0, 3200.0, 400.0),
-( 66010005, 66030005, 'Class E', 500.0, 'Grade 5', 450.0, 50.0, 5000.0, 500.0, 250.0, 1000.0, 4000.0, 500.0);
-
-/*
-INSERT INTO T_Buy (M_EmpID, Member_ID, T_Class, T_Weight, T_Grade, T_GWeight, T_PWeight, T_GoodMoney, T_PoorMoney, T_CommonFee, T_MemberSaving, T_Net, Grade_Price) 
-VALUES 
-( 66010006, 66030006, 'Class F', 600.0, 'Grade 6', 540.0, 60.0, 6000.0, 600.0, 300.0, 1200.0, 4800.0, 600.0),
-( 66010007, 66030007, 'Class G', 700.0, 'Grade 7', 630.0, 70.0, 7000.0, 700.0, 350.0, 1400.0, 5600.0, 700.0),
-( 66010008, 66030008, 'Class H', 800.0, 'Grade 8', 720.0, 80.0, 8000.0, 800.0, 400.0, 1600.0, 6400.0, 800.0),
-( 66010009, 66030009, 'Class I', 900.0, 'Grade 9', 810.0, 90.0, 9000.0, 900.0, 450.0, 1800.0, 7200.0, 900.0),
-*/
+( 2, 2, 'Class B', 200.0, 'Grade 2', 180.0, 20.0, 2000.0, 200.0, 100.0, 400.0, 1600.0, 200.0),
+( 3, 3, 'Class C', 300.0, 'Grade 3', 270.0, 30.0, 3000.0, 300.0, 150.0, 600.0, 2400.0, 300.0),
+( 4, 4, 'Class D', 400.0, 'Grade 4', 360.0, 40.0, 4000.0, 400.0, 200.0, 800.0, 3200.0, 400.0),
+( 5, 5, 'Class E', 500.0, 'Grade 5', 450.0, 50.0, 5000.0, 500.0, 250.0, 1000.0, 4000.0, 500.0),
+( 6, 6, 'Class F', 600.0, 'Grade 6', 540.0, 60.0, 6000.0, 600.0, 300.0, 1200.0, 4800.0, 600.0),
+( 7, 7, 'Class G', 700.0, 'Grade 7', 630.0, 70.0, 7000.0, 700.0, 350.0, 1400.0, 5600.0, 700.0),
+( 8, 8, 'Class H', 800.0, 'Grade 8', 720.0, 80.0, 8000.0, 800.0, 400.0, 1600.0, 6400.0, 800.0),
+( 9, 9, 'Class I', 900.0, 'Grade 9', 810.0, 90.0, 9000.0, 900.0, 450.0, 1800.0, 7200.0, 900.0),
+( 10, 10, 'Class J', 1000.0, 'Grade 10', 910.0, 100.0, 10000.0, 10000.0, 550.0, 2000.0, 8000.0, 1000.0);
