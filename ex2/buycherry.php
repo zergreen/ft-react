@@ -130,7 +130,7 @@
             </table>
         </div>
         <br>
-        GRADE: <span x-text="grade"></span>
+        <!-- GRADE: <span x-text="grade"></span> -->
 
         <span></span>การเงิน
         <div>
