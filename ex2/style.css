@@ -1,6 +1,6 @@
 div {
-    border-style: solid;
-    border-color: black;
+    /* border-style: none;
+    border-color: black; */
 
     margin: 1%;
 }
@@ -15,4 +15,21 @@ span {
 
    border-style: none;
    /* border-color: green; */
+}
+
+.box-black {
+    border-style: solid;
+    border-color: black;
+}
+
+#sign {
+    /* color: blue;
+    background-color: aqua; */
+}
+
+div #logo {
+    text-align: center;
+}
+#logo img {
+    width:10%;
 }
